@@ -3,12 +3,15 @@
     <v-toolbar-side-icon></v-toolbar-side-icon>
     <v-toolbar-title>Voltional</v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn flat>Forum</v-btn>
-      <v-btn flat>Ask Question</v-btn>
+    <div class="hidden-sm-and-down">
+      <router-link to="/forum">
+        <v-btn flat>Ask Question</v-btn>
+      </router-link>
       <v-btn flat>Category</v-btn>
-      <v-btn flat>Login</v-btn>
-    </v-toolbar-items>
+      <router-link to="/login">
+        <v-btn flat>Login</v-btn>
+      </router-link>
+    </div>
   </v-toolbar>
 </template>
 

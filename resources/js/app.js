@@ -9,6 +9,7 @@ require("./bootstrap");
 window.Vue = require("vue");
 import Vue from "vue";
 import Vuetify from "vuetify";
+import router from "./Router/router";
 
 Vue.use(Vuetify);
 
@@ -32,5 +33,6 @@ Vue.use(Vuetify);
 Vue.component("AppHome", require("./components/AppHome.vue").default);
 
 const app = new Vue({
-    el: "#app"
+    el: "#app",
+    router
 });
