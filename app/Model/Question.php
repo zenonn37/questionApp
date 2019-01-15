@@ -8,15 +8,18 @@ use App\User;
 
 class Question extends Model
 {
-    public function user(){
+    public function user()
+    {
         $this->belongsTo(User::class);
     }
 
-    public function replies(){
+    public function replies()
+    {
         return $this->hasMany(Reply::class);
     }
 
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo(Category::class);
     }
 }
