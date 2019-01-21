@@ -10,6 +10,9 @@ window.Vue = require("vue");
 import Vue from "vue";
 import Vuetify from "vuetify";
 import router from "./Router/router";
+import User from "./Helper";
+
+window.User = User;
 
 Vue.use(Vuetify);
 
@@ -30,9 +33,11 @@ Vue.use(Vuetify);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import userMixin from "./usermixin";
 Vue.component("AppHome", require("./components/AppHome.vue").default);
 
 const app = new Vue({
     el: "#app",
+    mixins: [userMixin],
     router
 });
